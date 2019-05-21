@@ -1,4 +1,4 @@
-###### ItemStackRecipeProject
+## ItemStackRecipeProject
 
 A **Spigot** plugin wrote in **Kotlin**.
 
