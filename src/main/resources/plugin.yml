@@ -1,0 +1,7 @@
+name: ItemStackRecipes
+version: ${project.version}
+main: org.waqe.pl.itemstackrecipes.CustomItems
+api-version: "1.13"
+commands:
+  customitems:
+    aliases: [ci]
