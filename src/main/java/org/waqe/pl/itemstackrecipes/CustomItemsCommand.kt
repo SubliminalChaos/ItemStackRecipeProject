@@ -42,16 +42,16 @@ class CustomItemsCommand(customItems: CustomItems) : CommandExecutor, Listener {
     @EventHandler
     fun onPlayerPrepareCraft(e: PrepareItemCraftEvent) {
         Bukkit.getLogger().info("PrepareItemCraftEvent......")
-        var inv: CraftingInventory = e.getInventory()
+        val inv: CraftingInventory = e.getInventory()
         val matrix: Array<ItemStack> = inv.getMatrix()
         if (matrix.size < 9) {
             Bukkit.getLogger().info("log output......")
             return
         }
         try {
-            if (matrix[1] != null && (matrix[1].type.equals(Material.DIAMOND_BLOCK))) {
-                if (matrix[4] != null && (matrix[4].type.equals(Material.DIAMOND_BLOCK))) {
-                    if (matrix[7] != null && (matrix[7].type.equals(Material.STICK))) {
+            if ((matrix[1].type.equals(Material.DIAMOND_BLOCK))) {
+                if ((matrix[4].type.equals(Material.DIAMOND_BLOCK))) {
+                    if (matrix[7].type.equals(Material.STICK)) {
                                 Bukkit.getLogger().info("adding awesomesword")
                                 inv.setResult(this.awesomeSword)
                     }
